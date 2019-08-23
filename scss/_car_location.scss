@@ -1,0 +1,17 @@
+body {
+    background-image: url(../img/bg.jpg);
+    .car_maininfo {
+        >.container {
+            @at-root .maininfo_title {
+                &::before {
+                    content: '';
+                }
+            }
+            @at-root .car_wrap {
+                .car_location {
+                    background-color: #fa0;
+                }
+            }
+        }
+    }
+}

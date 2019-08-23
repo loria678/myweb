@@ -1,0 +1,97 @@
+{
+  "ka-scss-rwd-sm": {
+    "prefix": "k-rsm-手機",
+    "body": [" @include media(sm) {}"],
+    "description": "ka-mix專用斷點-手機"
+  },
+  "ka-scss-rwd-md": {
+    "prefix": "k-rmd平板",
+    "body": [" @include media(md) {}"],
+    "description": "ka-mix專用斷點-平板"
+  },
+  "ka-scss-rwd-lg": {
+    "prefix": "k-rlg-平板橫",
+    "body": [" @include media(lg) {}"],
+    "description": "ka-mix專用斷點-平板橫向"
+  },
+  "ka-scss-rwd-xl": {
+    "prefix": "k-rxl-桌機",
+    "body": [" @include media(xl) {}"],
+    "description": "ka-mix專用斷點-桌機"
+  },
+  "ka-scss-btn": {
+    "prefix": "k-btn-按鈕",
+    "body": ["@include btnCase(100px, 50px);"],
+    "description": "ka-按鈕專用快速鍵"
+  },
+  "ka-scss-h2-rwd": {
+    "prefix": "kh2-r-手機字",
+    "body": ["map-get($fz_md_size, h2);"],
+    "description": "ka-RWD-手機h2"
+  },
+  "ka-scss-h3-rwd": {
+    "prefix": "kh3-r-手機字",
+    "body": ["map-get($fz_md_size, h3);"],
+    "description": "ka-RWD-手機h3"
+  },
+  "ka-scss-h2": {
+    "prefix": "kh2-電腦字",
+    "body": ["map-get($fz_size, h2);"],
+    "description": "ka-h2-桌機h2"
+  },
+  "ka-scss-h3": {
+    "prefix": "kh3-電腦字",
+    "body": ["map-get($fz_size, h3);"],
+    "description": "ka-h3-桌機h3"
+  },
+  "ka-s-color-main": {
+    "prefix": "k-co-m-顏色主",
+    "body": ["map-get($color, main_bg_color);"],
+    "description": "ka-main-專屬主要顏色"
+  },
+  "ka-s-color-footer": {
+    "prefix": "k-co-m-顏色footer",
+    "body": ["map-get($color, footer_bg_color);"],
+    "description": "ka-footer-頁尾主要顏色"
+  },
+  "ka-s-color-sec": {
+    "prefix": "k-co-m-顏色sec",
+    "body": ["map-get($color, sec_bg_color);"],
+    "description": "ka-sec-第二主要顏色"
+  },
+  "ka-s-color-title": {
+    "prefix": "k-co-m-title",
+    "body": ["map-get($color, title_color);"],
+    "description": "ka-title-標題主要顏色"
+  },
+  "ka-s-color-fz": {
+    "prefix": "k-co-m-fontsize",
+    "body": ["map-get($color, font_color);"],
+    "description": "ka-font-文字主要顏色"
+  },
+  "ka-s-clear": {
+    "prefix": "k-clear",
+    "body": ["@include clearfix"],
+    "description": "ka-s-clear-清除浮動"
+  },
+  "ka-flex-cen2": {
+    "prefix": "k-f-cen2",
+    "body": ["@include flex-cen-cen", ""],
+    "description": "ka-flex-flex置中"
+  },
+  "ka-flex-around": {
+    "prefix": "k-f-ar",
+    "body": ["@include flex-around", ""],
+    "description": "ka-flex-around專用"
+  },
+  "ka-flex-between": {
+    "prefix": "k-f-bet",
+    "body": ["@include flex-between", ""],
+    "description": "ka-flex-between專用"
+  },
+  "ka-pos-cen2": {
+    "prefix": "k-p-cen2",
+    "body": ["@include pos_cen-cen", ""],
+    "description": "ka-pos_cen-cen專用"
+  }
+}

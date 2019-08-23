@@ -1,0 +1,16 @@
+body {
+    .car_timeline {
+        >.container {
+            @at-root .timeline_item {
+                background-color: #ccc;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                >.timeline_card {
+                    width: 40%;
+                    border: 1px solid #00f;
+                }
+            }
+        }
+    }
+}
