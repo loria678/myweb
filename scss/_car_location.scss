@@ -2,14 +2,75 @@ body {
     background-image: url(../img/bg.jpg);
     .car_maininfo {
         >.container {
-            @at-root .maininfo_title {
-                &::before {
-                    content: '';
+            @at-root{ .maininfo_titleshow{
+                background-image: url('../img/title.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                position: relative;
+                border: 1px solid #000;
+                @include flex-cen-cen;
+                height: 270px;
+                >.maininfo_title{
+                    padding-top: 60px;
                 }
             }
-            @at-root .car_wrap {
+            }
+            @at-root .carinfo_wrap {
+                padding-left: 120px;
+                padding-right: 120px;
+                margin-bottom: 50px;
+                >.item{
+                    float: left;
+                }
+                >.clearfix{
+                    clear: both;
+                }
                 .car_location {
-                    background-color: #fa0;
+                    padding: 3%;
+                    width: 47.5%;
+                    background-color: #DCD6B7;
+                    border-radius: 10px;
+                    margin-right: 4.347826%;
+
+                    .car_localmsg,
+                    .car_date,
+                    .car_local{
+                        h3{
+                        padding: 10px;
+                        color: #de892b;
+                        }
+                        p{
+                            padding-left: 10px;
+                        }
+                    }
+                    .pie_picwrap{
+                        width: 65%;
+                        padding-top: 10%;
+                        padding-left: 5%;
+                        display: inline-block;
+                        .pie_img{
+                            max-width: 100%;
+                            display: inline-block;
+                            
+                        }
+                    }
+                    >p{
+                        font-weight: bold;
+                        display: inline-block;
+                        position: relative;
+                        top: -100px;
+                        transform:rotate(-10deg);
+                    }
+                }
+                .calendar{
+                    width: 29.1666%;
+                    background-color: #f00;
+                    border: 1px solid #222;
+                    
+                    .calendar_table{
+                        width: 100%;
+                        font-size: 18px;
+                    }
                 }
             }
         }
