@@ -178,11 +178,16 @@ table {
 }
 
 body {
-  background-image: url(../img/bg.jpg);
+  background-image: url(../img/car/bg.jpg);
+  background-position: center;
+}
+
+body .car_maininfo {
+  margin-bottom: 150px;
 }
 
 .maininfo_titleshow {
-  background-image: url("../img/title.png");
+  background-image: url("../img/car/title.png");
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -218,11 +223,17 @@ body {
 }
 
 .carinfo_wrap .car_location {
-  padding: 3%;
+  padding: 1%;
   width: 47.5%;
-  background-color: #DCD6B7;
+  background-color: #dcd6b7;
   border-radius: 10px;
   margin-right: 4.347826%;
+}
+
+.carinfo_wrap .car_location .car_localmsg,
+.carinfo_wrap .car_location .car_date,
+.carinfo_wrap .car_location .car_local {
+  margin: 15px;
 }
 
 .carinfo_wrap .car_location .car_localmsg h3,
@@ -260,18 +271,42 @@ body {
 }
 
 .carinfo_wrap .calendar {
-  width: 29.1666%;
+  width: 350px;
+  height: 350px;
   background-color: #f00;
   border: 1px solid #222;
 }
 
-.carinfo_wrap .calendar .calendar_table {
+.carinfo_wrap .calendar_table {
   width: 100%;
+  text-align: center;
+}
+
+.carinfo_wrap .calendar_table td {
+  border: 1px solid #555;
   font-size: 18px;
+  width: 30px;
+  color: #0f0;
+}
+
+.car_map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .car_maininfo > .container .map_info {
+  color: #de892b;
+  position: relative;
+  top: 30px;
+  left: 240px;
 }
 
 .timeline_titleshow {
-  background-image: url("../img/title.png");
+  background-image: url("../img/car/title.png");
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -293,7 +328,6 @@ body {
 }
 
 .timeline_item {
-  background-color: #ccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

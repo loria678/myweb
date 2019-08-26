@@ -1,77 +1,96 @@
 body {
-    background-image: url(../img/bg.jpg);
+    background-image: url(../img/car/bg.jpg);
+    background-position: center;
     .car_maininfo {
+        margin-bottom: 150px;
         >.container {
-            @at-root{ .maininfo_titleshow{
-                background-image: url('../img/title.png');
-                background-repeat: no-repeat;
-                background-position: center;
-                position: relative;
-                border: 1px solid #000;
-                @include flex-cen-cen;
-                height: 270px;
-                >.maininfo_title{
-                    padding-top: 60px;
+            @at-root {
+                .maininfo_titleshow {
+                    background-image: url('../img/car/title.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: relative;
+                    border: 1px solid #000;
+                    @include flex-cen-cen;
+                    height: 270px;
+                    >.maininfo_title {
+                        padding-top: 60px;
+                    }
                 }
-            }
             }
             @at-root .carinfo_wrap {
                 padding-left: 120px;
                 padding-right: 120px;
                 margin-bottom: 50px;
-                >.item{
+                >.item {
                     float: left;
                 }
-                >.clearfix{
+                >.clearfix {
                     clear: both;
                 }
                 .car_location {
-                    padding: 3%;
+                    padding: 1%;
                     width: 47.5%;
-                    background-color: #DCD6B7;
+                    background-color: #dcd6b7;
                     border-radius: 10px;
                     margin-right: 4.347826%;
-
                     .car_localmsg,
                     .car_date,
-                    .car_local{
-                        h3{
-                        padding: 10px;
-                        color: #de892b;
+                    .car_local {
+                        margin: 15px;
+                        h3 {
+                            padding: 10px;
+                            color: #de892b;
                         }
-                        p{
+                        p {
                             padding-left: 10px;
                         }
                     }
-                    .pie_picwrap{
+                    .pie_picwrap {
                         width: 65%;
                         padding-top: 10%;
                         padding-left: 5%;
                         display: inline-block;
-                        .pie_img{
+                        .pie_img {
                             max-width: 100%;
                             display: inline-block;
-                            
                         }
                     }
-                    >p{
+                    >p {
                         font-weight: bold;
                         display: inline-block;
                         position: relative;
                         top: -100px;
-                        transform:rotate(-10deg);
+                        transform: rotate(-10deg);
                     }
                 }
-                .calendar{
-                    width: 29.1666%;
+                .calendar {
+                    // width: 29.1666%;
+                    width: 350px;
+                    height: 350px;
                     background-color: #f00;
                     border: 1px solid #222;
-                    
-                    .calendar_table{
+                    &_table {
                         width: 100%;
-                        font-size: 18px;
+                        text-align: center;
+                        td {
+                            border: 1px solid #555;
+                            font-size: 18px;
+                            width: 30px;
+                            color: #0f0;
+                        }
                     }
                 }
+            }
+            @at-root .car_map {
+                display: flex;
+                justify-content: center;
+            }
+            .map_info {
+                color: #de892b;
+                position: relative;
+                top: 30px;
+                left: 240px;
             }
         }
     }

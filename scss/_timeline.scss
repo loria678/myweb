@@ -1,21 +1,22 @@
 body {
     .car_timeline {
         >.container {
-            @at-root{ .timeline_titleshow{
-                background-image: url('../img/title.png');
-                background-repeat: no-repeat;
-                background-position: center;
-                position: relative;
-                border: 1px solid #000;
-                @include flex-cen-cen;
-                height: 270px;
-                >.timeline_title{
-                    padding-top: 60px;
+            @at-root {
+                .timeline_titleshow {
+                    background-image: url('../img/car/title.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: relative;
+                    border: 1px solid #000;
+                    @include flex-cen-cen;
+                    height: 270px;
+                    >.timeline_title {
+                        padding-top: 60px;
+                    }
                 }
             }
-            }
             @at-root .timeline_item {
-                background-color: #ccc;
+                // background-color: #ccc;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -24,7 +25,7 @@ body {
                     justify-content: center;
                     width: 40%;
                     border: 1px solid #00f;
-                    .story_img{
+                    .story_img {
                         max-width: 100%;
                     }
                 }
