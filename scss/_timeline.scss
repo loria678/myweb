@@ -15,18 +15,36 @@ body {
                     }
                 }
             }
-            @at-root .timeline_item {
+            .timeline_item {
                 // background-color: #ccc;
+                position: relative;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                >.timeline_card {
+                &:after{
+                    content: '';
+                    height: 100%;
+                    width: 1px;
+                    background-color: #090c7b;
+                    position: absolute;
+                }
+                >.timeline_card:nth-child(even){
+                    display: flex;
+                    width: 40%;
+                    border: 1px solid #00f;
+                }
+
+
+                >.timeline_card:nth-child(odd){
                     display: flex;
                     justify-content: center;
                     width: 40%;
                     border: 1px solid #00f;
-                    .story_img {
-                        max-width: 100%;
+                    @at-root .story_msg{
+                        // text-align-last: left;
+                        padding: 10px;
+                        >h3{
+                        }
                     }
                 }
             }

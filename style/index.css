@@ -182,16 +182,15 @@ body {
   background-position: center;
 }
 
-body .car_maininfo {
+.car_maininfo {
   margin-bottom: 150px;
 }
 
-.maininfo_titleshow {
+.car_maininfo > .container .maininfo_titleshow {
   background-image: url("../img/car/title.png");
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  border: 1px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,89 +203,104 @@ body .car_maininfo {
   height: 270px;
 }
 
-.maininfo_titleshow > .maininfo_title {
+.car_maininfo > .container .maininfo_titleshow > .maininfo_title {
   padding-top: 60px;
 }
 
-.carinfo_wrap {
-  padding-left: 120px;
-  padding-right: 120px;
-  margin-bottom: 50px;
+.car_maininfo > .container .carinfo_wrap {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 15px;
 }
 
-.carinfo_wrap > .item {
+.car_maininfo > .container .carinfo_wrap > .item {
   float: left;
 }
 
-.carinfo_wrap > .clearfix {
+.car_maininfo > .container .carinfo_wrap > .clearfix {
   clear: both;
 }
 
-.carinfo_wrap .car_location {
+.car_location {
   padding: 1%;
-  width: 47.5%;
+  width: 59.375%;
   background-color: #dcd6b7;
   border-radius: 10px;
-  margin-right: 4.347826%;
+  margin-right: 4.166666%;
 }
 
-.carinfo_wrap .car_location .car_localmsg,
-.carinfo_wrap .car_location .car_date,
-.carinfo_wrap .car_location .car_local {
+.car_location .car_localmsg,
+.car_location .car_date,
+.car_location .car_local {
   margin: 15px;
 }
 
-.carinfo_wrap .car_location .car_localmsg h3,
-.carinfo_wrap .car_location .car_date h3,
-.carinfo_wrap .car_location .car_local h3 {
+.car_location .car_localmsg h3,
+.car_location .car_date h3,
+.car_location .car_local h3 {
   padding: 10px;
   color: #de892b;
 }
 
-.carinfo_wrap .car_location .car_localmsg p,
-.carinfo_wrap .car_location .car_date p,
-.carinfo_wrap .car_location .car_local p {
+.car_location .car_localmsg p,
+.car_location .car_date p,
+.car_location .car_local p {
   padding-left: 10px;
 }
 
-.carinfo_wrap .car_location .pie_picwrap {
+.car_location .pie_picwrap {
   width: 65%;
-  padding-top: 10%;
-  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  padding-left: 15%;
   display: inline-block;
 }
 
-.carinfo_wrap .car_location .pie_picwrap .pie_img {
+.car_location .pie_picwrap .pie_img {
   max-width: 100%;
   display: inline-block;
 }
 
-.carinfo_wrap .car_location > p {
+.car_location > p {
   font-weight: bold;
   display: inline-block;
   position: relative;
   top: -100px;
+  left: -35px;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
 }
 
-.carinfo_wrap .calendar {
+.calendar {
+  padding-top: 60px;
   width: 350px;
   height: 350px;
-  background-color: #f00;
-  border: 1px solid #222;
 }
 
-.carinfo_wrap .calendar_table {
-  width: 100%;
+.calendar_table {
   text-align: center;
 }
 
-.carinfo_wrap .calendar_table td {
-  border: 1px solid #555;
+.calendar_table th {
+  background-color: #e7b36d;
+  vertical-align: middle;
   font-size: 18px;
-  width: 30px;
-  color: #0f0;
+  width: 50px;
+  height: 50px;
+  color: #3c6193;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  -webkit-box-shadow: inset 3px 3px 10px 3px rgba(50, 50, 50, 0.2), inset 3px 2px 2px rgba(50, 50, 50, 0.2);
+          box-shadow: inset 3px 3px 10px 3px rgba(50, 50, 50, 0.2), inset 3px 2px 2px rgba(50, 50, 50, 0.2);
+}
+
+.calendar_table td {
+  vertical-align: middle;
+  background-color: #eee;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  color: #3c6193;
 }
 
 .car_map {
@@ -298,7 +312,7 @@ body .car_maininfo {
           justify-content: center;
 }
 
-body .car_maininfo > .container .map_info {
+.car_maininfo > .container .map_info {
   color: #de892b;
   position: relative;
   top: 30px;
@@ -327,7 +341,8 @@ body .car_maininfo > .container .map_info {
   padding-top: 60px;
 }
 
-.timeline_item {
+body .car_timeline > .container .timeline_item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,7 +353,23 @@ body .car_maininfo > .container .map_info {
           justify-content: center;
 }
 
-.timeline_item > .timeline_card {
+body .car_timeline > .container .timeline_item:after {
+  content: '';
+  height: 100%;
+  width: 1px;
+  background-color: #090c7b;
+  position: absolute;
+}
+
+body .car_timeline > .container .timeline_item > .timeline_card:nth-child(even) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  border: 1px solid #00f;
+}
+
+body .car_timeline > .container .timeline_item > .timeline_card:nth-child(odd) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,8 +380,8 @@ body .car_maininfo > .container .map_info {
   border: 1px solid #00f;
 }
 
-.timeline_item > .timeline_card .story_img {
-  max-width: 100%;
+.story_msg {
+  padding: 10px;
 }
 
 img {
