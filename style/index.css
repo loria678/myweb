@@ -265,13 +265,15 @@ body {
 .car_location .pie_picwrap .pie_img {
   max-width: 100%;
   display: inline-block;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 .car_location .pie_picwrap .pie_checkinfo {
   font-weight: bold;
   display: inline-block;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
 }
 
 .calendar {
@@ -522,7 +524,6 @@ a {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  outline: 1px solid red;
   margin: 0 auto;
 }
 

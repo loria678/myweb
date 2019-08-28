@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../jquery-1.11.2.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="riqishijian.js"></script>
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <select id="nian" onclick="biantian()"></select
+        >年
+        <select id="yue" onclick="biantian()"></select
+        >月
+        <select id="tian"></select
+        >日
+
+        <input type="text" id="riqi" />
+
+        <div
+            class="modal fade"
+            id="myModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <br />
+                    //標題部分
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">日期選擇</h4>
+                        //顯示標題的地方
+                    </div>
+                    <br />
+                    //主體部分
+                    <div class="modal-body">
+                        <select id="nian">
+                            //年的下拉選單
+                        </select>
+    <select id="yue">
+                            //月的下拉選單
+                        </select>
+    <select id="tian">
+                            //天的下拉選單
+                        </select>
+    </div>
+    <br /> //最後部分
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+        <button type="button" class="btn btn-primary" id="sure">確定</button> //確定按鈕也要是加事件的，所以也要起個名字
+    </div>
+    </div>
+    <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+    </div>
+
+    <script>
+        $("#riqi").click(function() {
+            $('#myModal').modal('show'); //bootstrap直接提示怎麼顯示彈窗，直接拿過來用就可以
+        })
+
+
+        //載入年份
+        function LoadNian() {
+            var date = new Date; //和js的方法一樣取當前時間和年份
+            var year = date.getFullYear();
+            var str = "";
+            for (var i = year - 5; i < year 6; i) { <
+                br > 　　　　　　　　　 //判斷當前年是否選中
+                    if (i == year) {
+                        str = "<option selected='selected' value='"
+                        i "'>"
+                        i "</option>";
+                    } else {
+                        str = "<option value='"
+                        i "'>"
+                        i "</option>";
+                    }
+            }
+            $("#nian").html(str); //也是將值寫到年的下拉選單中
+        }
+
+
+        //載入月份
+        function LoadYue() { <
+            br > 　　　　　 //和js中的月份的邏輯都是一樣的
+                var date = new Date;
+            var yue = date.getMonth() 1; //取到當前月份
+            var str = "";
+            for (var i = 1; i < 13; i) { < br > 　　　　　　　　　 //判斷月份是否選中
+                    if (i == yue) {
+                        str = "<option selected='selected' value='"
+                        i "'>"
+                        i "</option>";
+                    } else {
+                        str = "<option value='"
+                        i "'>"
+                        i "</option>";
+                    }
+            }
+            $("#yue").html(str);
+        }
+
+        //載入天
+        function LoadTian() { <
+            br > 　　　　　 //和js中的邏輯是一樣的
+                var date = new Date;
+            var tian = date.getDate(); //取到天數
+            var zs = 31; //總天數
+            var nian = $("#nian").val(); //取到年的值
+            var yue = $("#yue").val(); //取到月的值<br><br>　　　　　//也是天數是30天的月份
+            if (yue == 4 || yue == 6 || yue == 9 || yue == 11) {
+                zs = 30;
+            } else if (yue == 2) { < br > 　　　　　　　　　 //判斷閏月的
+                    if ((nian % 4 == 0 && nian % 100 != 0) || nian % 400 == 0) {
+                        zs = 29;
+                    } else {
+                        zs = 28;
+                    }
+            }
+            var str = "";
+            for (var i = 1; i < zs 1; i) { < br > 　　　　　　　　　 //判斷天數是否選中
+                    if (i == tian) {
+                        str = "<option selected='selected' value='"
+                        i "'>"
+                        i "</option>";
+                    } else {
+                        str = "<option value='"
+                        i "'>"
+                        i "</option>";
+                    }
+            }
+            $("#tian").html(str);
+        }
+
+        $(document).ready(function(e) {
+            $("#nian").change(function() { //選年改變天
+                LoadTian();
+            })
+            $("#yue").change(function() { //選月改變天
+                LoadTian();
+            })
+        });
+
+
+        $("#sure").click(function() {
+            var nian = $("#nian").val(); //取到年的值
+            var yue = $("#yue").val(); //取到月份的值
+            var tian = $("#tian").val(); //取到天數的值
+            var str = nian "-"
+            yue "-"
+            tian; //拼接字串顯示年月日
+            $("#riqi").val(str); //將值放到riqi的文字框中
+            $('#myModal').modal('hide') //將彈窗關閉
+        })
+
+
+        $("#sure").click(function() {
+            var nian = $("#nian").val(); //取到年的值
+            var yue = $("#yue").val(); //取到月份的值
+            var tian = $("#tian").val(); //取到天數的值
+            var d = new Date();
+            var str = nian "-"
+            yue "-"
+            tian " "
+            d.getHours()
+            ":"
+            d.getMinutes()
+            ":"
+            d.getDate(); //拼接字串顯示年月日，還有時間
+            $("#riqi").val(str); //將值放到riqi的文字框中
+            $('#myModal').modal('hide') //將彈窗關閉
+        })
+    </script>
+</body>
+
+</html>

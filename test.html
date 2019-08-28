@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+
     <style>
         section {
             width: 900px;
@@ -48,6 +50,35 @@
             <img class="img" src="https://picsum.photos/400/400/?random=1" />
         </div>
     </div>
+
+    <input type="text" name="riqi" id="riqi" data-toggle="modal" data-target="#myModal" />
+    <!--给文本框定义id-->
+
+    <!--弹窗部分-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">修改界面</h4>
+                </div>
+                <div class="modal-body">
+                    <!--弹窗主题内容-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="baocun">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../gongju/bootstrap-3.3.7-dist/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+
+    <script src="../gongju/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="riqi.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="../gongju/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 </body>
 
 </html>
