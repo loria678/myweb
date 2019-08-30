@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <li class="aa">
+        <a href="#"></a>
+    </li>
+    <script>
+        var my_date = new Date()
+            // my_date.setYear(2015);
+            // my_date.setMonth(0,31);
+        var my_year = my_date.getFullYear()
+        var my_month = my_date.getMonth()
+        var my_date = my_date.getDate() //
+        document.write(my_year, '<br>')
+        document.write(my_month, '<br>')
+        document.write(my_date, '<br>')
+        var totalDay = daysMonth(my_month, my_year)
+        console.log(totalDay)
+        document.write(totalDay)
+    </script>
+</body>
+
+</html>
