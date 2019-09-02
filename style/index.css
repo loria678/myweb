@@ -280,31 +280,103 @@ body {
   width: 29.1666%;
   margin-right: 4%;
   height: 350px;
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-.calendar_table {
+.calendar .lightgrey {
+  color: #a8a8a8;
+}
+
+.calendar .darkgrey {
+  color: #565656;
+}
+
+.calendar .green {
+  color: #3c6193;
+}
+
+.calendar .greenbox {
+  border: 1px solid #6ac13c;
+  background: #e9f8df;
+}
+
+.calendar .title {
+  height: 70px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-
-.calendar_table th {
+  position: relative;
   background-color: #e7b36d;
   vertical-align: middle;
   font-size: 18px;
-  width: 50px;
-  height: 50px;
-  color: #3c6193;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   -webkit-box-shadow: inset 3px 3px 10px 3px rgba(50, 50, 50, 0.2), inset 3px 2px 2px rgba(50, 50, 50, 0.2);
           box-shadow: inset 3px 3px 10px 3px rgba(50, 50, 50, 0.2), inset 3px 2px 2px rgba(50, 50, 50, 0.2);
 }
 
-.calendar_table td {
-  vertical-align: middle;
-  background-color: #eee;
-  font-size: 18px;
-  width: 50px;
-  height: 50px;
+.calendar .title #calendar_title {
+  font-size: 25px;
+  font-family: arial;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 14px 0 0 0;
+}
+
+.calendar .title #calendar_year {
+  font-size: 15px;
+  font-family: arial;
+  font-weight: normal;
+}
+
+.calendar .title #prev {
+  text-indent: -9999px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 70px;
+  background: url(../img/car/prev_white.png) no-repeat 50% 50%;
+}
+
+.calendar .title #next {
+  text-indent: -9999px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 70px;
+  background: url(../img/car/next_white.png) no-repeat 50% 50%;
+}
+
+.calendar .body {
+  padding: 0px 20px;
+}
+
+.calendar .body_list > ul {
+  width: 100%;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.calendar .body_list > ul > li {
+  width: 14.28%;
+  height: 40px;
+  line-height: 40px;
+  list-style-type: none;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  text-align: center;
+}
+
+.calendar .body_list > ul > li > a {
+  text-decoration: none;
   color: #3c6193;
 }
 

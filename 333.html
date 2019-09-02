@@ -32,11 +32,11 @@
             var cha = document.getElementById("cha");
             var re = document.getElementById("re");
 
-            cha.addEventListener("click", change, false);
-            re.addEventListener("click", reduction, false);
+            // cha.addEventListener("click", change, false);
+            cha.onclick = change;
+            // re.addEventListener("click", reduction, false);
+            re.onclick = reduction;
             // btns[1].addEventListener("click", showAns, false);
-
-
         };
 
         // window.onload = init;
@@ -44,10 +44,4 @@
         window.addEventListener("load", init, false);
     </script>
 </body>
-
-
-
-
-
-
 </html>
