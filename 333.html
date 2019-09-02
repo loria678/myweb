@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="money">123456</div>
+    <input type="submit" value="更改" id="cha">
+    <input type="submit" value="還原" id="re">
+
+    <script>
+        // window.addEventListener("click", change, false);
+        // window.addEventListener("click", reduction, false);
+
+        function change() {
+            document.getElementById("money").innerText = "666";
+
+        }
+
+        function reduction() {
+            document.getElementById("money").innerText = "123456";
+        }
+
+
+        function init() {
+            var cha = document.getElementById("cha");
+            var re = document.getElementById("re");
+
+            cha.addEventListener("click", change, false);
+            re.addEventListener("click", reduction, false);
+            // btns[1].addEventListener("click", showAns, false);
+
+
+        };
+
+        // window.onload = init;
+
+        window.addEventListener("load", init, false);
+    </script>
+</body>
+
+
+
+
+
+
+</html>
