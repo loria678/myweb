@@ -111,14 +111,15 @@
                     // width: 1px;
                     // background-color: #090c7b;
                     // position: absolute;
-                    left: 80px;
+                    left: 10%;
                 }
                 >.timeline_card:nth-child(2),
                 >.timeline_card:nth-child(6),
                 >.timeline_card:nth-child(10) {
                     >.story_msg {
                         &:after {
-                            display: none;
+                            // display: none;
+                            left: -104%;
                         }
                     }
                 }
@@ -134,7 +135,7 @@
                             // border-radius: 10px;
                             // position: absolute;
                             // top: 40px;
-                            left: -7px;
+                            left: -4%;
                         }
                     }
                 }
@@ -142,16 +143,16 @@
                 >.timeline_card:nth-child(5),
                 >.timeline_card:nth-child(9) {
                     position: relative;
-                    &:after {
-                        content: '';
-                        height: 20px;
-                        width: 20px;
-                        background-color: #090c7b;
-                        border-radius: 10px;
-                        position: absolute;
-                        top: 40px;
-                        left: -7px;
-                    }
+                    // &:after {
+                    //     content: '';
+                    //     height: 20px;
+                    //     width: 20px;
+                    //     background-color: #090c7b;
+                    //     border-radius: 10px;
+                    //     position: absolute;
+                    //     top: 40px;
+                    //     left: -3%;
+                    // }
                 }
             }
         }

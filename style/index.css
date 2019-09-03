@@ -521,12 +521,12 @@ body {
 
 @media (max-width: 767px) {
   .car_timeline > .container .timeline_item:after {
-    left: 80px;
+    left: 10%;
   }
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(2) > .story_msg:after,
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(6) > .story_msg:after,
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(10) > .story_msg:after {
-    display: none;
+    left: -104%;
   }
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(3) > .story_msg,
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(7) > .story_msg {
@@ -534,24 +534,12 @@ body {
   }
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(3) > .story_msg:after,
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(7) > .story_msg:after {
-    left: -7px;
+    left: -4%;
   }
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(1),
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(5),
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(9) {
     position: relative;
-  }
-  .car_timeline > .container .timeline_item > .timeline_card:nth-child(1):after,
-  .car_timeline > .container .timeline_item > .timeline_card:nth-child(5):after,
-  .car_timeline > .container .timeline_item > .timeline_card:nth-child(9):after {
-    content: '';
-    height: 20px;
-    width: 20px;
-    background-color: #090c7b;
-    border-radius: 10px;
-    position: absolute;
-    top: 40px;
-    left: -7px;
   }
 }
 
