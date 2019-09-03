@@ -519,14 +519,36 @@ body {
   max-width: 100%;
 }
 
+.car_timeline > .container .timeline_item > .timeline_card:nth-child(1),
+.car_timeline > .container .timeline_item > .timeline_card:nth-child(5),
+.car_timeline > .container .timeline_item > .timeline_card:nth-child(9) {
+  position: relative;
+}
+
+.car_timeline > .container .timeline_item > .timeline_card:nth-child(1) .card_point,
+.car_timeline > .container .timeline_item > .timeline_card:nth-child(5) .card_point,
+.car_timeline > .container .timeline_item > .timeline_card:nth-child(9) .card_point {
+  display: none;
+  height: 20px;
+  width: 20px;
+  background-color: #f00;
+  border-radius: 10px;
+  position: absolute;
+}
+
 @media (max-width: 767px) {
   .car_timeline > .container .timeline_item:after {
-    left: 10%;
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: #090c7b;
+    position: absolute;
+    left: 9.5%;
   }
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(2) > .story_msg:after,
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(6) > .story_msg:after,
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(10) > .story_msg:after {
-    left: -104%;
+    display: none;
   }
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(3) > .story_msg,
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(7) > .story_msg {
@@ -536,10 +558,17 @@ body {
   .car_timeline > .container .timeline_item > .timeline_card:nth-child(7) > .story_msg:after {
     left: -4%;
   }
-  .car_timeline > .container .timeline_item > .timeline_card:nth-child(1),
-  .car_timeline > .container .timeline_item > .timeline_card:nth-child(5),
-  .car_timeline > .container .timeline_item > .timeline_card:nth-child(9) {
-    position: relative;
+  .car_timeline > .container .timeline_item > .timeline_card:nth-child(1) .card_point,
+  .car_timeline > .container .timeline_item > .timeline_card:nth-child(5) .card_point,
+  .car_timeline > .container .timeline_item > .timeline_card:nth-child(9) .card_point {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: #090c7b;
+    border-radius: 10px;
+    position: absolute;
+    top: 40px;
+    left: -4%;
   }
 }
 
